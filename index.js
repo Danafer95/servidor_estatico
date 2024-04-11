@@ -42,12 +42,8 @@ http.createServer((peticion, respuesta) => {
 
     });
 
-    /* Stat necesita 2 argumentos, la ruta y un callback --> recibe el posible error y las estadisticas del elemento*/
 
-
-  
-
-}).listen(4000);
+}).listen(process.env.PORT || 4000);
 
 
 /*
@@ -68,4 +64,16 @@ http.createServer((peticion, respuesta) => {
 
 node--> necesita q el proceso este siempre activo
 
-*/
+
+ Stat necesita 2 argumentos, la ruta y un callback --> recibe el posible error y las estadisticas del elemento
+    
+    variables de entorno --> environment variables --> informacion almacenada en el ordenador para ser leida por cualquier proceso, usualmente es un string
+
+    NOMBRE = Ruben
+    EDAD = 22
+    
+    Para leer estas variables esto va a ser:
+    process.env.EDAD
+
+    cualquier prooved de nube nos va a dar el puerto --> process.env.PORT
+ */
